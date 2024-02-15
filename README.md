@@ -7,7 +7,7 @@ This C program manages the execution of multiple test cases using forked process
 ## Instructions
 
 1. Compiling
-    - Place each file in one folder,you could either run the Makefile in the temrinal or compile each file individually.
+    - Place each file in one folder, you could either run the Makefile in the temrinal or compile each file individually.
 
 2. Number of Child Processes:
    - The user specifies the number of child processes to create with a max of 25, using the command line ./(Compiled Executable's name)(# of procecess). 
