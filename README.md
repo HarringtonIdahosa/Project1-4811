@@ -6,17 +6,13 @@ This C program manages the execution of multiple test cases using forked process
 
 ## Instructions
 
-1. Test Cases
-    - Place each test case into a file and compile them.
+1. Compiling
+    - Place each file in one folder,you could either run the Makefile in the temrinal or compile each file individually.
 
-2. Directory Input:
-   - Upon running `parent-child.c`, the program prompts the user to copy and paste the directory containing test cases.
-   - Example: "Copy and paste the directory of the test cases: /path/to/test_cases"
+2. Number of Child Processes:
+   - The user specifies the number of child processes to create with a max of 25, using the command line ./(Compiled Executable's name)(# of procecess). 
+   - Example: ./output 9
 
-3. Number of Child Processes:
-   - The user specifies the number of child processes to create, capped at a maximum of 25.
-
-4. Execution:
+3. Execution:
    - The program generates child processes, each executing a test case based on its index.
    - The parent process then waits for all child processes to finish.
-
