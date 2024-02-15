@@ -2,7 +2,7 @@
 
 ## Overview
 
-This C program manages the concurrent execution of multiple test cases using forked processes. Each child process is responsible for running a specific test case, while the parent process waits for their completion.
+This C program manages the execution of multiple test cases using forked processes. Each child process is responsible for running a specific test case, while the parent process waits for their completion.
 
 ## Instructions
 
