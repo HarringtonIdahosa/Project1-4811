@@ -1,33 +1,13 @@
 CC = gcc
-CFLAGS = -Wall -Werror
+CFLAGS = -pthread
 
-all: output test1 test2 test3 test4 test5
+SOURCES = main.c prod_cons_MT.c
+EXECUTABLE = prog2
 
-output: project1.c
-	$(CC) $(CFLAGS) -o $@ $^
+all: $(EXECUTABLE)
 
-test1: test1.c
-	$(CC) $(CFLAGS) -o $@ $^
-
-test2: test2.c
-	$(CC) $(CFLAGS) -o $@ $^
-
-test3: test3.c
-	$(CC) $(CFLAGS) -o $@ $^
-
-test4: test4.c
-	$(CC) $(CFLAGS) -o $@ $^
-
-test5: test5.c
-	$(CC) $(CFLAGS) -o $@ $^
-
-run_tests: all
-	./output
-	./test1
-	./test2
-	./test3
-	./test4
-	./test5
+$(EXECUTABLE): $(SOURCES)
+	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	rm -f output test1 test2 test3 test4 test5
+	@rm -f $(EXECUTABLE)
