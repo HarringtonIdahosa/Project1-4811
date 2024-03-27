@@ -1,4 +1,4 @@
-////sched_sim.cpp
+//sched_sim.cpp
 #include "sched_sim.h"
 
 extern int snapshotInterval;
