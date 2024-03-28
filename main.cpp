@@ -30,12 +30,12 @@ int main(int argc, char **argv)
     {
         lineCount++;
     }
-    // Return to top of file
-    inputFileStream.clear();
+    
+    inputFileStream.clear();// Return to top 
     inputFileStream.seekg(0, inputFileStream.beg);
 
-    // Read in data
-    processInfo = new ProcessInfo[lineCount];
+    
+    processInfo = new ProcessInfo[lineCount];// Read data
     for (int j = 0; j < lineCount; j++)
     {
         inputFileStream >> processInfo[j].burstTime;
@@ -46,15 +46,16 @@ int main(int argc, char **argv)
     }
    inputFileStream.close();
 
-    //memcpy the processInfo pointer so each algorythm starts with its own copy
+    //memcpy processInfo so each algorithm starts with a personal own copy
+    
     ProcessSet FCFSprocessSet(processInfo, lineCount);
     ProcessSet SJFprocessSet(processInfo, lineCount);
     ProcessSet STCprocessSet(processInfo, lineCount);
     ProcessSet RRprocessSet(processInfo, lineCount);
     ProcessSet NPPprocessSet(processInfo, lineCount);
 
-    // Open file to write
-    outputFile = fopen(outputTxt, "w");
+    
+    outputFile = fopen(outputTxt, "w");// Open file to display
 
     FCFS(&FCFSprocessSet);
     SJF(&SJFprocessSet);
