@@ -36,8 +36,9 @@ void *threads(void *arg)
     thread_info *a = (thread_info *) arg;
     FILE *temp;
     
-    char rw[1];
+   
     int VMS; // virtual meamory size
+    char rw[1];
     
     
     char Reg[3];
