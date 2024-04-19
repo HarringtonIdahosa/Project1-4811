@@ -69,7 +69,7 @@ void *threads(void *arg)
         fscanf(temp, "%s", rw);
         fscanf(temp, "%s", Reg);
         fscanf(temp, "%d", &addr);
-        fprintf(write, "P%d OPERATION: %c\t%s\t0x%08x\n", a->thread_ID, rw[0], Reg, addr);
+        fprintf(write, "P%d OPERATION: R %s 0x%08x\n", a->thread_ID, Reg, addr);
         pthread_mutex_lock(&mutex);
         int page_Num = addr / page_Size;
         int x = 0;
