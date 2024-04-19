@@ -152,8 +152,7 @@ int main(int argc, char *argv[]){
     int processes;
     
     int mem_Size;
-    thread_info a[processes];
-    pthread_t b[processes];
+
     fscanf(read, "%d", &mem_Size);
     fscanf(read, "%d", &page_Size);
    
@@ -168,7 +167,8 @@ int main(int argc, char *argv[]){
     }
     fscanf(read, "%d", &processes);
 //creating threads   
-    
+    thread_info a[processes];
+    pthread_t b[processes];
     char process[10][100];
     
     for(j = 0; j < processes; j++) {
